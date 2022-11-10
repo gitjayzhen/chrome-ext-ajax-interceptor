@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import 'antd/dist/antd.css';
 import {Switch, Collapse, Input, Select, Button, Badge, Tooltip} from 'antd';
-const Panel = Collapse.Panel;
 
 import Replacer from './Replacer';
 
+import 'antd/dist/antd.css';
 import './Main.less';
+
+const Panel = Collapse.Panel;
 
 const buildUUID = () => {
   var dt = new Date().getTime();
