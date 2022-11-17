@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Main from './Main';
 
 const DEFAULT_SETTING = {
-  ajaxInterceptor_switchOn: true,
+  ajaxInterceptor_switchOn: false,
   ajaxInterceptor_rules: [],
 }
 

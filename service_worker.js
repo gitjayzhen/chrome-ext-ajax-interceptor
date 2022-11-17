@@ -40,3 +40,12 @@ chrome.storage.local.get(['ajaxInterceptor_switchOn', 'ajaxInterceptor_rules'], 
     }
   }
 });
+
+
+// 右键菜单开关弹出的 iframe 页面
+chrome.contextMenus.create({
+	title: "AjaxInterceptor",
+	onclick: function(){
+		chrome.runtime.sendMessage("toggle");
+	}
+});
