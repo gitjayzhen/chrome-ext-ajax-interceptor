@@ -12,6 +12,17 @@
 
 这是一个可以修改Ajax请求返回结果的Chrome插件，可用于调试/排查页面上的问题。（当然你也可以用其它一些工具如Charles修改网络请求的返回值，但操作繁琐，该插件方便很多，且不会对Chrome之外造成影响）
 
+## 开发者手册
+
+>python2 + node 10
+
+chrome extensions documentation: <https://developer.chrome.com/docs/extensions/>
+
+- [Manifest file format](https://developer.chrome.com/docs/extensions/mv3/manifest/)
+- [使用 service_worker 来管理事件](https://developer.chrome.com/docs/extensions/mv3/service_workers/)
+- [Content scripts](https://developer.chrome.com/docs/extensions/mv3/content_scripts/)
+- [web_accessible_resources](https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/)
+
 ## 安装
 
 chrome商店地址：<https://chrome.google.com/webstore/detail/ajax-interceptor/nhpjggchkhnlbgdfcbgpdpkifemomkpg>
