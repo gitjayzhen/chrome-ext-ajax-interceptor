@@ -41,8 +41,9 @@ chrome商店地址：<https://chrome.google.com/webstore/detail/ajax-interceptor
 
 version 1.4.0:
 
-- 1.修改样式
-- 2.添加右键功能项
+- 1.调整目录结构和打包方式
+- 2.修改样式
+- 3.添加右键功能项
 
 version 0.7:
 

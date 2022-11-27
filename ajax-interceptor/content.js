@@ -58,8 +58,8 @@ if (window.self === window.top) {
           show = !show;
           iframe.style.setProperty('transform', show ? 'translateX(0)' : 'translateX(470px)', 'important');
         }
-
-        return true;
+        // 展示注释了
+        // return true;
       });
     }
   }
@@ -106,4 +106,3 @@ window.addEventListener("pageScript", function(event) {
 // s.setAttribute('type', 'text/javascript');
 // s.innerText = `console.log('test')`;
 // document.documentElement.appendChild(s);
-

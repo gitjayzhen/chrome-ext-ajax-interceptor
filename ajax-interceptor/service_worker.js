@@ -1,6 +1,5 @@
-
-chrome.action.onClicked.addListener(function(tab) {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+chrome.action.onClicked.addListener((tab) => {
+  chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, "toggle");
   })
 });
@@ -42,10 +41,22 @@ chrome.storage.local.get(['ajaxInterceptor_switchOn', 'ajaxInterceptor_rules'], 
 });
 
 
+function menuContextClick(info, tab) {
+  const { menuItemId } = info
+  if (menuItemId === 'ajax-interceptor-menu') {
+    chrome.tabs.sendMessage(tab.id, "toggle");
+  }
+};
+
+// 这个必须放到前面
+chrome.contextMenus.onClicked.addListener(menuContextClick)
+
 // 右键菜单开关弹出的 iframe 页面
-chrome.contextMenus.create({
-	title: "AjaxInterceptor",
-	onclick: function(){
-		chrome.runtime.sendMessage("toggle");
-	}
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.contextMenus.create({
+      id: "ajax-interceptor-menu",
+      title: "AjaxInterceptor",
+      contexts: ['page', 'frame', 'link', 'image']
+    }
+  );
 });
